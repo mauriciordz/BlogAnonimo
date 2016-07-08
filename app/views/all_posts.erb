@@ -1,0 +1,9 @@
+<h1>Todos los posts</h1>
+<div style="border: 1px solid black; margin:1em">
+<% @all.each do |x| %>
+<b style="color:blue;">Título:</b><br>
+<%= x.title %><br>
+<b style="color:blue;">Descripción:</b><br>
+<%= x.description%><br>
+<%end%>
+</div>

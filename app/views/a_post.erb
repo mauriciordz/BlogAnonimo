@@ -1,0 +1,11 @@
+<h1>Post.</h1>
+<div style="border: 1px solid black; margin:1em">
+<%unless @post == 1 %>
+  <b style="color:blue;">Título:</b><br>
+  <%= @post.title %><br>
+  <b style="color:blue;">Descripción:</b><br>
+  <%= @post.description%><br>
+<%else %>
+  <p style="margin:2px">No se ha creado ese post todavia.</p>
+<%end%>
+</div>

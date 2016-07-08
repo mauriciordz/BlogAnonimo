@@ -1,0 +1,60 @@
+  <h1>Bienvenido a Blog Anónimo.</h1>
+  
+  <p>Escribe una entrada:</p>
+
+<div id="sub_block">   
+  <form action ="/write_post" method="post">
+    <br>
+    <p>Escoge un título</p><br>
+    <input type="text" name="title"><br>
+    <p>Contenido:</p><br>
+    <textarea rows="20" cols="50" type="text" name="content"></textarea><br>
+    <p>Escribe tus tags separados por comas.</p><br>
+    <input type="text" name="tags"><br><br>
+    <input type="submit" value="Escribir un post">
+  </form>
+<!-- Para asignarle los tags a un post se hace un push a post.tags, agregándole todas las instanicas de la clase Tag.
+Para seleccionar todos los posts que contengan algún tag en espeífico, se selecciona el tag y después se llama a tag.posts. Esto regresará todos los posts asociados al tag -->
+ </div>
+
+<p style="text-align:center"><%= "*"*90 %></p>
+<p>Ve todos los posts creados.</p>
+<div id="sub_block">
+  <form action ="/show_all_posts" method="get">
+    <br>
+    <input type="submit" value="Ver todos los posts">
+  </form>
+</div>
+
+<p style="text-align:center"><%= "*"*90 %></p>
+<div id="sub_block">
+    <form action ="/show_a_post" method="get">
+    <br>
+    <p>Introduce el número de post que quieres ver.</p>
+    <input type="text" name="post_id"><br> <br>
+    <input type="submit" value="Mostrar un post">
+  </form>
+</div>
+
+<p style="text-align:center"><%= "*"*90 %></p>
+<div id="sub_block">
+    <form action ="/edit_a_post" method="get">
+    <br>
+    <p>Escribe el número de post que quieres editar<p>
+    <input type="text" name="post_id"><br>
+    <p>Título:</p><br>
+    <input type="text" name="title"><br>
+    <p>Contenido:</p><br>
+    <textarea rows="20" cols="50" type="text" name="description"></textarea><br>
+    <input type="submit" value="Editar un post">
+  </form>
+</div>
+
+<p style="text-align:center"><%= "*"*90 %></p>
+<div id="sub_block">
+    <form action ="/delete_a_post" method="get">
+    <br>
+    <input type="text" name="id"><br>
+    <input type="submit" value="Eliminar un post">
+  </form>
+</div>
